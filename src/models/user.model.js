@@ -72,7 +72,7 @@ userSchema.methods.generateAccessToken=function(){
         )
 }
 
-userSchema.methods.genrateRefreshToken=function(){
+userSchema.methods.genrateRefreshToken=function(){//refresh tokens takes long time to expire
     return jwt.sign({
         _id:this._id,
       },
